@@ -47,7 +47,7 @@ public static class TradeMeParser
     
     private static JsonObject SearchResultItem(IElement searchResultItem)
     {
-        Console.WriteLine(searchResultItem.ToHtml());
+        //Console.WriteLine(searchResultItem.ToHtml());
         var res = new JsonObject();
         res["title"] = searchResultItem.QuerySelector(".tm-motors-search-card-title__title")?.TextContent;
         // res["price"] = searchResultItem.QuerySelector("p.price")?.TextContent;

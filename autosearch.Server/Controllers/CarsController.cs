@@ -8,10 +8,10 @@ namespace autosearch.Controllers;
 public class CarsController : ControllerBase
 {
     private readonly ILogger<CarsController> _logger;
-    private readonly ICarService _carService;
+    private readonly CarService _carService;
     public CarsController(
         ILogger<CarsController> logger,
-        ICarService carService)
+        CarService carService)
     {
         _logger = logger;
         _carService = carService;

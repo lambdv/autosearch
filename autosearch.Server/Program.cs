@@ -1,5 +1,6 @@
 using autosearch.Data;
 using Microsoft.EntityFrameworkCore;
+using autosearch.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-builder.Services.AddScoped<autosearch.Services.ICarService, autosearch.Services.TradeMeService>();
+builder.Services.AddScoped<CarService, TradeMeService>();
 
 //db
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -27,7 +28,7 @@ if (app.Environment.IsDevelopment())
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-    db.Database.EnsureCreated();
+    db.Database.Migrate();
 }
 
 app.UseAuthorization();

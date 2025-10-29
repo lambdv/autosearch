@@ -8,3 +8,16 @@
 /autosearch/autosearch.csproj.user
 /.vs
 /.vscode
+**/bin
+**/obj
+**/Properties
+**/appsettings.json
+**/appsettings.Development.json
+**/autosearch.csproj.user
+**/autosearch.csproj.vspscc
+**/autosearch.csproj.user
+/.vs
+/.vscode
+**/bin
+**/obj
+/autosearch.Server/autosearch.db

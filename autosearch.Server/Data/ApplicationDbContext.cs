@@ -5,7 +5,7 @@ namespace autosearch.Data;
 
 public class ApplicationDbContext : DbContext
 {
-    public DbSet<Listing> Listings => Set<Listing>();
+    public DbSet<Listing> Listings { get; set; }
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
