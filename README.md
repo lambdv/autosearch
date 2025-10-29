@@ -1,10 +1,13 @@
 # AutoSearch.nz
 a "car-listings" search aggregator.
 
+
 ## Design & Implementation
 - Backend: .NET 9 Web API
 - Frontend: React
 - Database: SQLite
+
+![design diagram](./docs/architecture-design.png)
 
 ## Installation
 ```bash

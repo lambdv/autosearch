@@ -2,6 +2,7 @@ using Microsoft.Playwright;
 using AngleSharp;
 using AngleSharp.Dom;
 
+namespace autosearch.Services;
 public static class JsRendering
 {
 	public static async Task<IDocument> GetRenderedDocumentAsync(string url)
@@ -28,7 +29,9 @@ public static class JsRendering
 		});
 
 		//give the app a moment to fetch and render listings
-		try { await page.WaitForLoadStateAsync(LoadState.NetworkIdle, new PageWaitForLoadStateOptions { Timeout = 10000 }); } catch { }
+		try {
+			await page.WaitForLoadStateAsync(LoadState.NetworkIdle, new PageWaitForLoadStateOptions { Timeout = 10000 }); 
+		} catch {}
 
 		try
 		{
@@ -39,9 +42,7 @@ public static class JsRendering
 			});
 		}
 		catch
-		{
-			//selector not found in time, proceed with whatever content we have
-		}
+		{}
 
 		//wait for at least one real listing title to appear (not loading skeleton)
 		try
@@ -52,9 +53,7 @@ public static class JsRendering
 			);
 		}
 		catch
-		{
-			//titles didn't appear in time, continue with whatever content we have
-		}
+		{}
 		var html = await page.ContentAsync();
 
 		var angleContext = BrowsingContext.New(Configuration.Default);

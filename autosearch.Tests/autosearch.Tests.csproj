@@ -24,8 +24,4 @@
     <ProjectReference Include="..\autosearch.Server\autosearch.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include="resources\trademeResultSample.html" CopyToOutputDirectory="PreserveNewest" />
-  </ItemGroup>
-
 </Project>

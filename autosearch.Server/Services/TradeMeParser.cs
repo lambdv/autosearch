@@ -6,7 +6,7 @@ using AngleSharp.Io;
 namespace autosearch.Services;
 public static class TradeMeParser
 {
-    public static JsonArray Parse(AngleSharp.Dom.IDocument document)
+    public static JsonArray Invoke(IDocument document)
     {
         var res = new JsonArray();
 
@@ -41,7 +41,7 @@ public static class TradeMeParser
     private static IElement[] SearchResultItems(IElement searchResultsContainer)
     {
         return searchResultsContainer.QuerySelectorAll("tg-col")
-            // .Where(e => !e.ClassList.Contains("ad-card")) //execude ads
+            .Where(e => !e.ClassList.Contains("ad-card")) //execude ads
             .ToArray();
     }
     

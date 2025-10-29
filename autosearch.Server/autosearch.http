@@ -1,6 +1,0 @@
-@autosearch_HostAddress = http://localhost:5030
-
-GET {{autosearch_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
