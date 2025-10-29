@@ -1,0 +1,110 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lokesh\\source\\repos\\autosearch\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EDF3AC0F-0943-431F-BC88-282ADE2B0C4A}|autosearch\\autosearch.csproj|c:\\users\\lokesh\\source\\repos\\autosearch\\autosearch\\services\\trademeparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDF3AC0F-0943-431F-BC88-282ADE2B0C4A}|autosearch\\autosearch.csproj|solutionrelative:autosearch\\services\\trademeparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDF3AC0F-0943-431F-BC88-282ADE2B0C4A}|autosearch\\autosearch.csproj|c:\\users\\lokesh\\source\\repos\\autosearch\\autosearch\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDF3AC0F-0943-431F-BC88-282ADE2B0C4A}|autosearch\\autosearch.csproj|solutionrelative:autosearch\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDF3AC0F-0943-431F-BC88-282ADE2B0C4A}|autosearch\\autosearch.csproj|c:\\users\\lokesh\\source\\repos\\autosearch\\autosearch\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDF3AC0F-0943-431F-BC88-282ADE2B0C4A}|autosearch\\autosearch.csproj|solutionrelative:autosearch\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDF3AC0F-0943-431F-BC88-282ADE2B0C4A}|autosearch\\autosearch.csproj|c:\\users\\lokesh\\source\\repos\\autosearch\\autosearch\\controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDF3AC0F-0943-431F-BC88-282ADE2B0C4A}|autosearch\\autosearch.csproj|solutionrelative:autosearch\\controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDF3AC0F-0943-431F-BC88-282ADE2B0C4A}|autosearch\\autosearch.csproj|c:\\users\\lokesh\\source\\repos\\autosearch\\autosearch\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDF3AC0F-0943-431F-BC88-282ADE2B0C4A}|autosearch\\autosearch.csproj|solutionrelative:autosearch\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 197,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CarsController.cs",
+              "DocumentMoniker": "C:\\Users\\Lokesh\\source\\repos\\autosearch\\autosearch\\Controllers\\CarsController.cs",
+              "RelativeDocumentMoniker": "autosearch\\Controllers\\CarsController.cs",
+              "ToolTip": "C:\\Users\\Lokesh\\source\\repos\\autosearch\\autosearch\\Controllers\\CarsController.cs",
+              "RelativeToolTip": "autosearch\\Controllers\\CarsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T05:49:17.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Lokesh\\source\\repos\\autosearch\\autosearch\\Program.cs",
+              "RelativeDocumentMoniker": "autosearch\\Program.cs",
+              "ToolTip": "C:\\Users\\Lokesh\\source\\repos\\autosearch\\autosearch\\Program.cs",
+              "RelativeToolTip": "autosearch\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T05:29:32.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\Lokesh\\source\\repos\\autosearch\\autosearch\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "autosearch\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\Lokesh\\source\\repos\\autosearch\\autosearch\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "autosearch\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T05:29:17.152Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 203,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TradeMeParser.cs",
+              "DocumentMoniker": "C:\\Users\\Lokesh\\source\\repos\\autosearch\\autosearch\\Services\\TradeMeParser.cs",
+              "RelativeDocumentMoniker": "autosearch\\Services\\TradeMeParser.cs",
+              "ToolTip": "C:\\Users\\Lokesh\\source\\repos\\autosearch\\autosearch\\Services\\TradeMeParser.cs",
+              "RelativeToolTip": "autosearch\\Services\\TradeMeParser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T00:03:21.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "APIService.cs",
+              "DocumentMoniker": "C:\\Users\\Lokesh\\source\\repos\\autosearch\\autosearch\\Services\\APIService.cs",
+              "RelativeDocumentMoniker": "autosearch\\Services\\APIService.cs",
+              "ToolTip": "C:\\Users\\Lokesh\\source\\repos\\autosearch\\autosearch\\Services\\APIService.cs",
+              "RelativeToolTip": "autosearch\\Services\\APIService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T05:30:42.677Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
