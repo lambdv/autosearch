@@ -1,7 +1,7 @@
 using autosearch.Data;
 using Microsoft.EntityFrameworkCore;
 using autosearch.Services;
-using Microsoft.AspNetCore.SpaServices.Extensions;
+using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,15 +11,29 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddScoped<ICarService, TradeMeService>();
-builder.Services.AddSpaStaticFiles(options =>
-{
-    //store built spa assets in wwwroot
-    options.RootPath = "wwwroot";
-});
+// builder.Services.AddScoped<ICarService, TradeMeService>();
+
 
 //db
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite(connectionString));
+
+//redis
+// var redisConnectionString = builder.Configuration.GetConnectionString("Redis") ?? "localhost:6379";
+// try
+// {
+//     // Test Redis connection
+//     var options = ConfigurationOptions.Parse(redisConnectionString);
+//     options.AbortOnConnectFail = false;
+//     var mux = ConnectionMultiplexer.Connect(options);
+//     var db = mux.GetDatabase();
+//     await db.PingAsync(); // This will throw if Redis is not available
+//     builder.Services.AddSingleton<ICacheService>(_ => new RedisCacheService(redisConnectionString));
+// }
+// catch
+// {
+    builder.Services.AddSingleton<ICacheService, MemoryCacheService>();
+// }
 
 var app = builder.Build();
 
@@ -38,24 +52,10 @@ using (var scope = app.Services.CreateScope())
 }
 
 app.UseStaticFiles();
-app.UseSpaStaticFiles();
 
 app.UseAuthorization();
 
 app.MapControllers();
-
-//spa fallback and dev proxy
-app.UseSpa(spa =>
-{
-    //point to client source for dev
-    spa.Options.SourcePath = Path.Combine(app.Environment.ContentRootPath, "..", "autosearch.client");
-
-    if (app.Environment.IsDevelopment())
-    {
-        //proxy to vite/react-router dev server
-        spa.UseProxyToSpaDevelopmentServer("http://localhost:5173");
-    }
-});
 
 app.Run();
 

@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json.Nodes;
 using autosearch.Services;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace autosearch.Controllers;
 [ApiController]
@@ -9,6 +10,7 @@ public class CarsController : ControllerBase
 {
     private readonly ILogger<CarsController> _logger;
     private readonly ICarService _ICarService;
+
     public CarsController(
         ILogger<CarsController> logger,
         ICarService ICarService)
@@ -23,12 +25,12 @@ public class CarsController : ControllerBase
         try
         {
             JsonArray cars = await _ICarService.GetAsync();
-            _logger.LogInformation("Cars: {Cars}", cars.ToJsonString());
+            //_logger.LogInformation("Cars: {Cars}", cars.ToJsonString());
             return Ok(cars);
         }
         catch (Exception e)
         {
-            _logger.LogError("Error: {Error}", e.Message);
+            //_logger.LogError("Error: {Error}", e.Message);
             return BadRequest(e.Message);
         }
     }

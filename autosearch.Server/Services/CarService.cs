@@ -7,6 +7,7 @@ using System.Text.Json.Nodes;
 using System.Threading.Tasks;
 using System.Threading.Tasks;
 
+
 namespace autosearch.Services;
 
 public interface ICarService
@@ -25,11 +26,26 @@ public interface ICarService
 }
 public class TradeMeService : ICarService
 {
+    private readonly ICacheService _cache;
+
+    public TradeMeService(ICacheService cache)
+    {
+        _cache = cache;
+    }
+
     public async Task<JsonArray> GetAsync()
     {
-        var URI = "https://www.trademe.co.nz/a/motors/cars/search?vehicle_condition=used&price_max=7500&sort_order=motorsnewestvehicle&user_region=12";
-        var document = await JsRendering.GetRenderedDocumentAsync(URI);
+        var cacheKey = "cars:trademe";
+        var cacheValue = await _cache.GetAsync(cacheKey);
+        if (cacheValue != null)
+        {
+            return cacheValue;
+        }
+
+        var uri = "https://www.trademe.co.nz/a/motors/cars/search?vehicle_condition=used&price_max=7500&sort_order=motorsnewestvehicle&user_region=12";
+        var document = await JsRendering.GetRenderedDocumentAsync(uri);
         JsonArray data = TradeMeParser.Invoke(document);
+        _ = Task.Run(async () => await _cache.SetAsync(cacheKey, data, TimeSpan.FromMinutes(1*60)));
         return data;
     }
 }
@@ -38,7 +54,6 @@ public class CoventryCarsService : ICarService
 {
     public async Task<JsonArray> GetAsync()
     {
-        var URI = "https://www.coventrycars.co.nz/";
         throw new NotImplementedException();
     }
 }
@@ -47,7 +62,6 @@ public class TwoCheapCarsService : ICarService
 {
     public async Task<JsonArray> GetAsync()
     {
-        var URI = "https://www.2cheapcars.co.nz/dealership/wellington?utm_source=google-my-business&utm_medium=organic&utm_content=gmb-lower%20hutt";
        throw new NotImplementedException();
     }
 }
