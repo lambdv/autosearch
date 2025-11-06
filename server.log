@@ -1,0 +1,59 @@
+dotnet watch 🔥 Hot reload enabled. For a list of supported edits, see https://aka.ms/dotnet/hot-reload.
+  💡 Press "Ctrl + R" to restart.
+dotnet watch ⌚ Building C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\autosearch.csproj ...
+dotnet watch 🔨 Build succeeded: C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\autosearch.csproj
+dotnet watch ⌚ C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\Data\Entities\Listing.cs(15,19): warning CS8618: Non-nullable property 'Url' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\autosearch.csproj]
+dotnet watch ⌚ C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\Data\Entities\Listing.cs(16,19): warning CS8618: Non-nullable property 'Title' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\autosearch.csproj]
+dotnet watch ⌚ C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\Data\Entities\Listing.cs(17,19): warning CS8618: Non-nullable property 'Price' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\autosearch.csproj]
+dotnet watch ⌚ C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\Data\Entities\Listing.cs(19,19): warning CS8618: Non-nullable property 'ImageUrl' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\autosearch.csproj]
+dotnet watch ⌚ C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\Services\Aggregator.cs(15,34): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\autosearch.csproj]
+dotnet watch ⌚ C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\Services\CarService.cs(76,34): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\autosearch.csproj]
+dotnet watch ⌚ C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\Services\CarService.cs(84,34): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\autosearch.csproj]
+dotnet watch ⌚ C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\Services\TradeInClearanceCarsParser.cs(14,19): warning CS8602: Dereference of a possibly null reference. [C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\autosearch.csproj]
+dotnet watch ⌚ C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\Data\Entities\Listing.cs(6,19): warning CS8618: Non-nullable property 'Url' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\autosearch.csproj]
+dotnet watch ⌚ C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\Data\Entities\Listing.cs(7,19): warning CS8618: Non-nullable property 'Title' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\autosearch.csproj]
+dotnet watch ⌚ C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\Data\Entities\Listing.cs(8,19): warning CS8618: Non-nullable property 'Price' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\autosearch.csproj]
+dotnet watch ⌚ C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\Data\Entities\Listing.cs(10,19): warning CS8618: Non-nullable property 'ImageUrl' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\autosearch.csproj]
+Using launch settings from C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\Properties\launchSettings.json...
+info: Microsoft.EntityFrameworkCore.Migrations[20406]
+      No migrations were found in assembly 'autosearch'. A migration needs to be added before the database can be updated.
+info: Microsoft.EntityFrameworkCore.Migrations[20411]
+      Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-11-06 02:12:16.8748726+00:00');
+      SELECT changes();
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+          "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+          "ProductVersion" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "MigrationId", "ProductVersion"
+      FROM "__EFMigrationsHistory"
+      ORDER BY "MigrationId";
+info: Microsoft.EntityFrameworkCore.Migrations[20405]
+      No migrations were applied. The database is already up to date.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      DELETE FROM "__EFMigrationsLock";
+warn: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[16]
+      The WebRootPath was not found: C:\Users\Lokesh\source\repos\autosearch\autosearch.Server\wwwroot. Static files may be unavailable.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5030
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\Lokesh\source\repos\autosearch\autosearch.Server
+dotnet watch ❌ [autosearch (net9.0)] Exited with error code -1073741510
+dotnet watch ⏳ Waiting for a file to change before restarting ...

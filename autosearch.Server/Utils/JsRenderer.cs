@@ -2,7 +2,7 @@ using Microsoft.Playwright;
 using AngleSharp;
 using AngleSharp.Dom;
 
-namespace autosearch.Services;
+namespace autosearch.Utils;
 public static class JsRendering
 {
 	public static async Task<IDocument> GetRenderedDocumentAsync(string url)
