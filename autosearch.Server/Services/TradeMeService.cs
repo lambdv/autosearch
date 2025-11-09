@@ -107,6 +107,7 @@ public static class TradeMeParser
     {
         //Console.WriteLine(searchResultItem.ToHtml());
         var res = new JsonObject();
+        res["title"] = "trademe";
         res["title"] = searchResultItem.QuerySelector(".tm-motors-search-card-title__title")?.TextContent;
 
         // Extract price reliably

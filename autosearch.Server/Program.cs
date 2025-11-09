@@ -38,6 +38,9 @@ builder.Services.AddScoped<HttpClient>(_ =>
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite(connectionString));
 
+
+builder.Services.AddHostedService<Revalidator>();
+
 //redis
 // var redisConnectionString = builder.Configuration.GetConnectionString("Redis") ?? "localhost:6379";
 // try
@@ -52,8 +55,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite
 // }
 // catch
 // {
-    // builder.Services.AddScoped<ICacheService, SqliteCacheService>();
-    builder.Services.AddScoped<ICacheService, MemoryCacheService>();
+// builder.Services.AddScoped<ICacheService, SqliteCacheService>();
+builder.Services.AddSingleton<ICacheService, MemoryCacheService>();
 
 // }
 

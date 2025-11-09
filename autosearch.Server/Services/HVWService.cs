@@ -104,6 +104,7 @@ public static class HVWParser
     {
         //Console.WriteLine(searchResultItem.ToHtml());
         var res = new JsonObject();
+        res["source"] = "hutt valley wholesalers";
         res["title"] = searchResultItem.QuerySelector(".titleCol")?.QuerySelector(".listingTitle")?.TextContent.StripLeadingTrailingSpaces();
         // res["price"] = searchResultItem.QuerySelector("p.price")?.TextContent;
         // res["location"] = searchResultItem.QuerySelector("p.location")?.TextContent;

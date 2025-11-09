@@ -12,6 +12,8 @@ public class CarsController : ControllerBase
     //private readonly ICarService _ICarService;
     private readonly ICarService _trademe;
     private readonly ICarService _hvw;
+    private readonly ICarService _tic;
+
 
     public CarsController(
         ILogger<CarsController> logger,
@@ -21,6 +23,7 @@ public class CarsController : ControllerBase
         _logger = logger;
         _trademe = new TradeMeService(cache);
         _hvw = new HVWService(cache);
+        _tic = new TradeInClearanceCarsService(cache);
     }
 
     [HttpGet("trademe")]
@@ -55,11 +58,19 @@ public class CarsController : ControllerBase
         }
     }
 
-//     [HttpGet("trademe")]
-// public async Task<ActionResult<JsonArray>> GetTradeMeCars() =>
-//     Ok(await _tradeMeService.GetAsync());
-
-// [HttpGet("2cheap")]
-// public async Task<ActionResult<JsonArray>> Get2CheapCars() =>
-//     Ok(await _cheapCarService.GetAsync());
+    [HttpGet("tic")]
+    public async Task<ActionResult<JsonArray>> GetTradeInClearence()
+    {
+        try
+        {
+            JsonArray cars = await _tic.GetAsync();
+            //_logger.LogInformation("Cars: {Cars}", cars.ToJsonString());
+            return Ok(cars);
+        }
+        catch (Exception e)
+        {
+            //_logger.LogError("Error: {Error}", e.Message);
+            return BadRequest(e.Message);
+        }
+    }
 }
